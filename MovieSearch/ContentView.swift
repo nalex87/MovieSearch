@@ -18,9 +18,6 @@ struct ContentView: View {
                     Text("No results").foregroundColor(.gray)
                 } else {
                     List {
-                        if searchText.isEmpty {
-                            Text("No results").foregroundColor(.gray)
-                        }
                         ForEach(moviesData.movies, id: \.self) { movie in
                             NavigationLink {
                                 MovieDetailsView(movie: movie)
